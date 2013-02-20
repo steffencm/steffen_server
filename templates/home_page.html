@@ -1,0 +1,60 @@
+{% extends 'nav_bar.html' %}
+{% block head %}
+    {{ super() }}
+    <script>
+    $('.carousel').carousel({
+    interval: 2000
+    })
+    </script>
+{% endblock %}
+{% block body %}
+    {{ super() }}
+
+			<div id="carousel" class="carousel">
+  			<div class="carousel-inner">
+    			<div class="item active">
+                    <img src="{{ url_for('static', filename='minecraft1.png') }}"alt="Some Alt Text" class='img-rounded'/>
+    			</div>
+    			<div class="item">
+                    <img src="{{ url_for('static', filename='minecraft2.png') }}" alt="Some Alt Text" class='img-rounded'/>
+    			</div>
+    			<div class="item">
+                    <img src="{{ url_for('static', filename='minecraft3.png') }}" alt="Some Alt Text" class='img-rounded'/>
+    			</div>
+    			<div class="item">
+                    <img src="{{ url_for('static', filename='minecraft4.png') }}" alt="Some Alt Text" class='img-rounded'/>
+    			</div>
+  		</div>
+
+  <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
+
+</div>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h2>Welcome to the Steffen Home Server!</h2>
+        <p class="lead">You've come to Chris Steffen's personal website and the home of Steffen Minecraft Server</p>
+      </div>
+
+<hr>
+
+      <div class="row-fluid">
+        <div class="span4">
+          <h2>Personal Projects</h2>
+          <p>I enjoy starting many programming projects in my free time.  Finishing them however is a different story. Check out what I've been working on here</p>
+          <p><a class="btn btn-primary" href="#">See Projects <i class='icon-arrow-right icon-white'></i></a></p>
+        </div>
+        <div class="span4">
+          <h2>Minecraft Server</h2>
+          <p>A few people may remember the old minecraft server hosted a steffenserver.co.  I'm happy to say I am now hosting another server at this domain. Anyone is free to join. Daily maps coming soon</p>
+          <p><a class="btn btn-primary" href="#">Server Home Page <i class='icon-arrow-right icon-white'></i></a></p>
+       </div>
+        <div class="span4">
+          <h2>Contact Me</h2>
+          <p>Having trouble with the website or minecraft server? Want to contact me about one of my projects? Just want to talk?</p>
+          <p><a class="btn btn-primary" href="#">Contact Me Here <i class='icon-arrow-right icon-white'></i></a></p>
+        </div>
+      </div>
+{% endblock %}
+

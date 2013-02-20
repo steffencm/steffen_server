@@ -1,0 +1,31 @@
+{% extends "head.html" %}
+{% block body %}
+    <div class="container">
+        <div class="masthead">
+			<span class='label label-important'><i class='icon-warning-sign icon-white'></i>This website is under construction. Some things may not work at they should</span>  
+            <h2 class="muted">Steffen Home Server </h2>
+            <div class="navbar">
+            <div class="navbar-inner">
+            <div class="container">
+            <ul class="nav">
+                {% set active_page = active_page|default('home') -%}
+                {% for href, id, caption in navigation_links %}
+                <li{% if id == active_page %} class="active"{% endif %}
+                ><a href="{{ href|e }}">
+                    {% if id == 'home' %}<i class='icon-home'></i>{% endif %}
+                {{ caption|e }}</a></li>
+                {% endfor %}
+            </ul>
+            </div>
+          </div>
+        </div><!-- /.navbar -->
+      </div>
+{% endblock %}
+{% block footer %}
+    <hr>
+      <div class="footer">
+        <p class='muted'>Steffen Home Server - 2013</p>
+      </div>
+
+    </div> <!-- /container -->
+{% endblock %}
