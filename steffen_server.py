@@ -35,6 +35,10 @@ def mc_server():
     return render_template('mc_server.html', navigation_links=navigation_links,
             active_page='mc_server')
 
+@app.route('/mcserver/google_map')
+def google_map():
+    return render_template('google_map/index.html')
+
 
 @app.route('/about')
 def about():

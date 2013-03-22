@@ -1,5 +1,23 @@
 {% extends 'nav_bar.html' %}
 {% block body %}
     {{ super() }}
-    <h2>MC Server page coming soon</h2>
+    <hr>
+    <div class="jumbotron">
+        <h2>Steffen Minecraft Server Home Page</h2>
+    </div>
+    <img src="{{ url_for('static', filename ='minecraft_banner.png') }}" class="img-rounded">
+    <hr>
+    <div class="row-fluid">
+        <div class="span6">
+            <h3>Google Map</h3>
+            <p>Want to take a look at your latest project? Are you lost and trying to find your way home? Check out the latest google map of the minecraft server. I'll update this as often as I can and eventually put it on a nightly job</>
+            <p><a class="btn btn-primary" href="http://d.steffenserver.org">Google Map</a></p>
+        </div>
+        <div class="span6">
+            <h3>Previous Map</h3>
+            <p>A few of you may remeber the old minecraft server that was hosted at steffenserver.co.  The map may be gone but we still have plenty of pictures. Check them out at these imgur galleries</>
+            <p>
+            <a class="btn btn-primary" href="http://imgur.com/a/0cAdu#0">Gallery 1</a>    <a class="btn btn-primary" href="http://imgur.com/a/GPbv9">Gallery 1</a></p>
+        </div>
+    </div>
 {% endblock %}
